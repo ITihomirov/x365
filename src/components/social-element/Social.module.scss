@@ -1,0 +1,18 @@
+.social-item{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    &__info{
+        color: #FFF;
+        font-size: 14px;
+        font-family: "Kharkiv Tone";
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    img{
+        height: 16px;
+        width: 16px;
+    }
+}

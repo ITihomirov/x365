@@ -1,0 +1,243 @@
+.contact-section {
+  &__container {
+    margin-left: calc(100vw / 12);
+    margin-right: calc(100vw / 12);
+  }
+
+  .error-message{
+    color: red;
+    font-size: 16px;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__message{
+    position: absolute;
+    left: 0;
+    bottom: 78px;
+    p{
+      color: green;
+      font-size: 16px;
+      font-family: "Mulish";
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    span{
+      color: red;
+      font-size: 16px;
+      font-family: "Mulish";
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    gap: 94px;
+    padding: 100px 0;
+  }
+
+  &__contact-info {
+    border-top: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 50px 0;
+    gap: 24px;
+  }
+
+  &__form-input{
+    margin-bottom: 32px;
+    p{
+        color: #100E0C;
+        font-size: 14px;
+        font-family: "Kharkiv Tone";
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+  }
+
+  &__form-input:nth-of-type(3){
+    margin-bottom: 0;
+  }
+
+  &__form {
+    position: relative;
+    input {
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid #D0D0D0;
+        transition: all .3s ease;
+        height: 24px;
+        width: 100%;
+    }
+
+    input:focus,
+    input:hover,
+    input:active,
+    input:focus-within,
+    :focus-visible {
+        border-bottom: 1px solid #000;
+        box-shadow: none;
+        outline: none;
+    }
+  }
+
+  &__right{
+    position: relative;
+  }
+
+  &__submit{
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 40px;
+    border-radius: 40px;
+    border: 1px solid #FFF;
+    transition: all .3s ease;
+    cursor: pointer;
+    width: fit-content;
+    background: transparent;
+    border: 1px solid #100E0C;
+    svg{
+        transition: all .3s ease;
+    }
+    h4{
+        color: #100E0C;
+        font-size: 14px;
+        font-family: 'Kharkiv Tone', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &:hover{
+        background: #100E0C;
+        h4{
+            color: #fff;
+        }
+        svg{
+           transform: translate(30%);
+           path{
+            fill: #fff;
+           }
+        }
+    }
+  }
+
+  &__shape-image{
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    position: absolute;
+    right: 0;
+    top: -32px;
+  }
+
+  &__main-shape-image{
+    width: 68px;
+    height: 68px;
+    margin-bottom: -16px;
+  }
+
+  &__subheading{
+    margin-bottom: 24px;
+    font-size: 12px;
+    font-family: "Kharkiv Tone";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: linear-gradient(
+        to right,
+        #636d72,
+        #a9acac,
+        #909595,
+        #636d72,
+        #818688,
+        hsl(206, 7%, 42%)
+      );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #bf9d65;
+  }
+
+  &__heading{
+    span{
+        color: #080707;
+        font-size: 64px;
+        font-family: "Kharkiv Tone";
+        font-style: normal;
+        font-weight: 400;
+        line-height: 75px;
+        text-transform: uppercase;
+       
+    }
+  }
+
+  &__text{
+    color: #7C7C7C;
+    font-size: 16px;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 24px;
+  }
+
+  @media (max-width: 999px) {
+    &__container {
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+
+    &__contact-info {
+      border-top: 1px solid #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: initial;
+      padding: 30px 0 50px 0;
+      gap: 17px;
+    }
+
+    &__heading{
+        span{
+            font-size: 36px;
+            line-height: 46px;
+        }
+
+        img{
+            height: 38px;
+            width: 38px;
+            margin-bottom: -6px;
+        }
+    }
+
+    &__text{
+        margin-top: 34px;
+    }
+
+    &__contact-info {
+        border-top: 1px solid #000;
+        display: flex;
+        justify-content: space-between;
+        padding: 32px 0 40px 0;
+        gap: 17px;
+      }
+  }
+
+  @media(max-width: 768px){
+    &__wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 32px;
+        padding: 92px 0 48px 0;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.contact-item{
+    p{
+        color: #7C7C7C;
+        font-size: 14px;
+        font-family: "Mulish";
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    a, span{
+        color: #111010;
+        font-size: 22px;
+        font-family: "Kharkiv Tone";
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
+    }
+
+    @media(max-width: 999px){
+        a, span{
+            font-size: 20px;
+        }
+    }
+}

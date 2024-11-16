@@ -1,0 +1,251 @@
+.footer {
+  background: var(--black, #100e0c);
+  &__container {
+    padding-left: calc(100vw / 12);
+    padding-right: calc(100vw / 12);
+  }
+
+  &__copyright {
+    p {
+      display: block;
+      padding: 36px 0;
+      color: #8c8c8c;
+      font-size: 16px;
+      font-family: "Mulish";
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  &__policy {
+    padding: 36px 0;
+    ul {
+      display: flex;
+      li {
+        a {
+          margin: 0 0 0 19px;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    height: 132px;
+    width: 135px;
+    object-fit: contain;
+  }
+
+  &__main {
+    border-bottom: 1px solid #5b5b5b;
+    display: flex;
+  }
+
+  &__left {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    border-right: 1px solid #5b5b5b;
+    padding: 36px 0;
+    a{
+        width: fit-content;
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    padding: 36px 0 36px 60px;
+    h2 {
+      color: var(--grey, #8c8c8c);
+      text-align: center;
+      font-size: 25px;
+      font-family: "Kharkiv Tone";
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: capitalize;
+    }
+  }
+
+  &__left_menu {
+    display: flex;
+    gap: 100px;
+    padding-right: 60px;
+  }
+
+  &__down {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+  }
+
+  &__link {
+    width: fit-content;
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: var(--grey, #8c8c8c);
+    text-align: center;
+    font-size: 16px;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    position: relative;
+    margin-bottom: 36px;
+    text-align: left;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      transition: all 0.3s ease;
+      background: #8c8c8c;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  @media (max-width: 999px) {
+    &__copyright {
+      p {
+        text-align: center;
+        padding: 32px 0 8px 0;
+      }
+    }
+
+    &__logo {
+        margin: 0 auto;
+    }
+
+    &__policy {
+      padding: 8px 0 32px 0;
+      display: flex;
+      justify-content: center;
+      ul {
+        display: flex;
+        gap: 19px;
+        li {
+          a{
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    &__container {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    &__down {
+      flex-direction: column;
+    }
+
+    &__right {
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      padding-left: 0;
+      padding-top: 0;
+      padding-bottom: 32px;
+      h2 {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+    }
+
+    &__social {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 auto;
+      width: fit-content;
+      column-gap: 50px;
+    }
+
+    &__left {
+      flex-direction: column;
+      gap: 48px;
+      border: none;
+      width: 100%;
+      padding-bottom: 32px;
+      padding-top: 48px;
+    }
+
+    &__left_menu {
+      padding: 0;
+      justify-content: center;
+      ul {
+        li:last-child button {
+          margin: 0;
+        }
+      }
+    }
+
+    &__main {
+      flex-direction: column;
+    }
+  }
+
+  @media(max-width: 550px){
+    &__copyright {
+        p {
+          text-align: left;
+          padding: 32px 0 8px 0;
+        }
+      }
+
+      &__right {
+        justify-content: flex-start;
+        h2 {
+          text-align: left;
+        }
+      }
+
+      &__left_menu{
+        justify-content: flex-start;
+      }
+
+      &__social{
+        margin-left: 0 !important;
+      }
+  
+      &__social {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+        width: fit-content;
+        column-gap: 50px;
+      }
+  
+      &__logo {
+          margin: 0;
+      }
+  
+      &__policy {
+        justify-content: flex-start;
+   
+      }
+  }
+}

@@ -1,0 +1,64 @@
+.button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 40px;
+    border-radius: 40px;
+    border: 1px solid #FFF;
+    transition: all .3s ease;
+    width: fit-content;
+    cursor: pointer;
+    svg{
+        transition: all .3s ease;
+    }
+    h4{
+        color: #FFF;
+        font-size: 14px;
+        font-family: 'Kharkiv Tone', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &:hover{
+        background: #fff;
+        h4{
+            color: #111010;
+        }
+        svg{
+           transform: translate(30%);
+           path{
+            fill: #111010;
+           }
+        }
+    }
+}
+
+.hero-button{
+    margin-bottom: 48px;
+    background: #fff;
+    h4{
+        color: #000;
+    }
+    
+    svg{
+        path{
+            fill: #000;
+        }
+    }
+
+    &:hover{
+        background: #000;
+        h4{
+            color: #fff;
+        }
+        svg{
+            path{
+                fill: #fff;
+            }
+        }
+    }
+
+    @media(max-width: 768px){
+        margin-bottom: 15px;
+    }
+}

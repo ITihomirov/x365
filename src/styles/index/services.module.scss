@@ -1,0 +1,102 @@
+.services-section{
+    &__wrapper{
+        padding: 80px 0;
+    }
+
+    &__mobile-wrapper{
+        display: none;
+    }
+
+    &__container {
+        margin-left: calc(100vw / 12);
+        margin-right: calc(100vw / 12);
+      }
+
+    &__grid-wrapper{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 24px;
+    }
+
+    &__subheading{
+        font-size: 12px;
+        font-family: "Kharkiv Tone";
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        background: linear-gradient(rgba(99, 109, 114, 1), rgba(169, 172, 172, 1), rgba(144, 149, 149, 1), rgba(99, 109, 114, 1), rgba(129, 134, 136, 1), rgba(99, 107, 113, 1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #BF9D65;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    &__heading{
+        text-align: center;
+        color: #111010;
+        font-size: 48px;
+        font-family: "Kharkiv Tone";
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 60px;
+        span{
+            text-decoration-line: underline;
+        }
+    }
+
+    &__button{
+        display: flex;
+        gap: 10px;
+        margin: 60px auto 0 auto;
+        color: var(--black, #100E0C);
+        font-size: 20px;
+        font-family: "Kharkiv Tone";
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
+        text-transform: uppercase;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        svg{
+            rotate: 90deg;
+            transition: all .3s ease;
+        }
+        &:hover{
+            svg{
+                transform: translateX(30%);
+            }
+        }
+    }
+
+    @media(max-width: 999px){
+        &__button{
+            display: none;
+        }
+
+        &__mobile-wrapper{
+            display: block;
+            height: fit-content;
+        }
+    
+        &__grid-wrapper{
+           display: none;
+        }
+
+        &__heading{
+            font-size: 36px;
+        }
+
+        &__container {
+            margin-left: 24px;
+            margin-right: 24px;
+        }
+
+        &__wrapper{
+            padding: 60px 0;
+        }
+    }
+}

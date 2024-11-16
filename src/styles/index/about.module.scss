@@ -1,0 +1,149 @@
+.about-section {
+  &__container {
+    margin-left: calc(100vw / 12);
+    margin-right: calc(100vw / 12);
+  }
+
+  &__wrapper {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    gap: 60px;
+  }
+
+  .swiper-button-next-custom {
+    svg {
+      path {
+        fill: #000;
+      }
+    }
+  }
+  &__content-right {
+    width: 35%;
+  }
+
+  &__content-left {
+    width: 65%;
+  }
+
+  &__main-image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__subheading {
+    font-size: 12px;
+    font-family: "Kharkiv Tone";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    background: linear-gradient(
+      to right,
+      #636d72,
+      #a9acac,
+      #909595,
+      #636d72,
+      #818688,
+      hsl(206, 7%, 42%)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #bf9d65;
+    width: fit-content;
+  }
+
+  &__subheading::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__heading {
+    color: #111010;
+    font-size: 48px;
+    font-family: "Kharkiv Tone";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    span {
+      text-decoration-line: underline;
+    }
+  }
+
+  &__swiper {
+    p {
+      color: #7c7c7c;
+      font-size: 16px;
+      font-family: "Mulish";
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  @media (max-width: 999px) {
+    &__wrapper {
+      gap: 20px;
+      padding: 60px 0;
+    }
+
+    &__heading {
+      font-size: 36px;
+    }
+
+    &__container {
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__wrapper {
+      flex-direction: column-reverse;
+    }
+
+    &__content-right {
+      width: 100%;
+    }
+
+    &__content-left {
+      width: 100%;
+    }
+  }
+}
+
+.router {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+  }
+  &__prev {
+    display: block;
+    cursor: pointer;
+  }
+  &__next {
+    display: block;
+    transform: rotate(180deg);
+    cursor: pointer;
+  }
+}
